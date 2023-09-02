@@ -1,0 +1,13 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+// This defines an overall definition, rather than a typography
+html {
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+}
