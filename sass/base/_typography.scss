@@ -33,7 +33,8 @@ body {
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    // Gradient Clipped to text.
+
+    // Gradient Clipped to text: the next four lines
     background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
     display: inline-block;
     -webkit-background-clip: text;
