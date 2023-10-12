@@ -1,0 +1,53 @@
+.story{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white,.6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left:9rem;// because we transformed the circle shape, to translate to the left -3rem.
+    font-size: $default-font-size;
+    transform: skewX(-12deg); //but reverse-skew the text, and the image. 
+
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left; //It needs height and width to actually work
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%); //define where the content floats around the element
+
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%); //gived the actual shape of the element
+        transform: translateX(-3rem) skewX(12deg);
+    }
+    &__img{
+        height: 100%; //there is something weird here... doesn't work with width.
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden;//Nobody actually know why it works, but works. Fixes animations
+        transition: all .5s;
+    }
+    &__text{
+        transform: skew(12deg);
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        //need another backface visibility
+    }
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}

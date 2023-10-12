@@ -13,13 +13,14 @@
         display: inline-block;
         background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
         -webkit-background-clip: text;
+        background-clip: text;
         color: transparent;
     }
 
     &:hover{
         transform: translateY(-1.5rem) scale(1.03);
     }
-    &__text{
+    // &__text{
 
-    }
+    // }
 }
