@@ -1,11 +1,12 @@
 .u-center{
-    text-align: center;
-    margin: 0 auto;
+    text-align: center !important;
+    margin: 0 auto !important;
 }
 .u-center-text {
-    text-align: center;
+    text-align: center !important;
 }
 
-.u-margin-bottom-small {margin-bottom: 1.5rem;}
-.u-margin-bottom-medium {margin-bottom:4rem;}
-.u-margin-bottom-big{margin-bottom: 8rem;}
+.u-margin-bottom-small {margin-bottom: 1.5rem !important;}
+.u-margin-bottom-medium {margin-bottom:4rem !important;}
+.u-margin-bottom-big{margin-bottom: 8rem !important;}
+//For the utilities, it is a good practice to use importar.
