@@ -1,17 +1,8 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 * {
   margin: 0;
   padding: 0;
   /* Changes the box models. 
-  Borders and padding are not added to the total width*/
+    Borders and padding are not added to the total width*/
   box-sizing: border-box;
 }
 
@@ -29,12 +20,14 @@ body {
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(127, 214, 112, 0.733),
-      rgba(41, 181, 134, 0.669)
+      rgba(126, 213, 111, 0.733),
+      rgba(40, 180, 133, 0.669)
     ),
     url(../img/hero.jpg);
-  background-size: cover; /*Tries to fit the element to the box*/
-  background-position: top; /*Crops on window resizing, but the top remains the same.*/
+  background-size: cover;
+  /*Tries to fit the element to the box*/
+  background-position: top;
+  /*Crops on window resizing, but the top remains the same.*/
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   position: relative;
 }
@@ -63,6 +56,7 @@ body {
   backface-visibility: hidden;
   margin-bottom: 60px;
 }
+
 .heading-primary--main {
   display: block;
   font-size: 60px;
@@ -70,12 +64,12 @@ body {
   letter-spacing: 35px;
   animation: moveInLeft 1s ease-out;
 }
+
 .heading-primary--sub {
   display: block;
   font-size: 35px;
   font-weight: 400;
   letter-spacing: 7.5px;
-
   animation: moveInRight 1s ease-out;
 }
 
@@ -84,7 +78,6 @@ body {
     opacity: 0;
     transform: translateX(-100px);
   }
-
   80% {
     transform: translateX(20px);
   }
@@ -99,7 +92,6 @@ body {
     opacity: 0;
     transform: translateX(100px);
   }
-
   80% {
     transform: translateX(-20px);
   }
@@ -108,12 +100,12 @@ body {
     transform: translateX(0);
   }
 }
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
     transform: translateY(100px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -129,7 +121,6 @@ body {
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s;
-
   position: relative;
 }
 
@@ -154,12 +145,10 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 100px;
-
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-
   transition: all 0.4s;
 }
 
